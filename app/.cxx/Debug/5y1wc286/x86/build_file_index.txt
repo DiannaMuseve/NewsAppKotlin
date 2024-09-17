@@ -1,0 +1,1 @@
+/Users/dmuseve/Desktop/AndroidProjects/NewsAppKotlin/app/CMakeLists.txt

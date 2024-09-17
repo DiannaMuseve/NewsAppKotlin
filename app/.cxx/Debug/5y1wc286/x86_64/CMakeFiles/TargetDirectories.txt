@@ -1,0 +1,3 @@
+/Users/dmuseve/Desktop/AndroidProjects/NewsAppKotlin/app/.cxx/Debug/5y1wc286/x86_64/CMakeFiles/native-lib.dir
+/Users/dmuseve/Desktop/AndroidProjects/NewsAppKotlin/app/.cxx/Debug/5y1wc286/x86_64/CMakeFiles/edit_cache.dir
+/Users/dmuseve/Desktop/AndroidProjects/NewsAppKotlin/app/.cxx/Debug/5y1wc286/x86_64/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/Users/dmuseve/Desktop/AndroidProjects/NewsAppKotlin/app/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/dmuseve/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/dmuseve/Desktop/AndroidProjects/NewsAppKotlin/app/.cxx/Debug/5y1wc286/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/dmuseve/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/dmuseve/Desktop/AndroidProjects/NewsAppKotlin/app/.cxx/Debug/5y1wc286/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib::@6890427a1f51a3e7e1df": {
+      "artifactName": "native-lib",
+      "abi": "x86_64",
+      "output": "/Users/dmuseve/Desktop/AndroidProjects/NewsAppKotlin/app/build/intermediates/cxx/Debug/5y1wc286/obj/x86_64/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}

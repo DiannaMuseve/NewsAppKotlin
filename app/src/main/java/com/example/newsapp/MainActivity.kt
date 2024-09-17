@@ -3,38 +3,34 @@ package com.example.newsapp
 import com.example.newsapp.viewmodel.NewsViewModel
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.activity.viewModels
 import com.example.newsapp.databinding.ActivityMainBinding
-import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
-    private val viewModel: NewsViewModel by viewModels()
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val adapter = ArticleAdapter(emptyList())
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.adapter = adapter
+//        navController = findNavController(R.id.nav_host_fragment)
+//        setupActionBarWithNavController(navController)
 
-        viewModel.getEverything(
-            query = "apple",
-            from = "2024-08-27",
-            to = "2024-08-27",
-            sortBy = "popularity",
-            apiKey = "384c812648314266a3cb7e5e6bbd632e"
-        )
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
+                as NavHostFragment
+        navController = navHostFragment.findNavController()
+       // setupActionBarWithNavController(navController)
+    }
 
-        viewModel.articles.observe(this, Observer { articles ->
-            adapter.updateArticles(articles)
-        })
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }
-
